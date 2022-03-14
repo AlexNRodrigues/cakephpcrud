@@ -5,37 +5,37 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
+    <aside class="col-md-3 col-sm-12">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Você tem certesa que deseja excluir o usuário #{0}?', $user->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Editar Usuário'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item fs-5']) ?>
+            <?= $this->Form->postLink(__('excluir Usuário'), ['action' => 'delete', $user->id], ['confirm' => __('Você tem certesa que deseja excluir o usuário #{0}?', $user->id), 'class' => 'side-nav-item fs-5']) ?>
+            <?= $this->Html->link(__('Listar Usuários'), ['action' => 'index'], ['class' => 'side-nav-item fs-5']) ?>
+            <?= $this->Html->link(__('Novo Usuário'), ['action' => 'add'], ['class' => 'side-nav-item fs-5']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="col-md-9 col-sm-12">
         <div class="users view content">
-            <h3><?= h($user->id) ?></h3>
+            <h3>#<?= h($user->id) ?></h3>
             <table>
                 <tr>
-                    <th><?= __('Nome') ?></th>
+                    <th class="fs-4"><?= __('Nome') ?></th>
                     <td><?= h($user->nome) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Email') ?></th>
+                    <th class="fs-4"><?= __('Email') ?></th>
                     <td><?= h($user->email) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
+                    <th class="fs-4"><?= __('Id') ?></th>
                     <td><?= $this->Number->format($user->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Created') ?></th>
+                    <th class="fs-4"><?= __('Created') ?></th>
                     <td><?= h($user->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Modified') ?></th>
+                    <th class="fs-4"><?= __('Modified') ?></th>
                     <td><?= h($user->modified) ?></td>
                 </tr>
             </table>
